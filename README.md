@@ -11,3 +11,7 @@ kubectl apply -f https://raw.githubusercontent.com/HussamQreie/Test-Files/main/y
 ```sh
 kubectl get nodes -o wide 
 ```
+### infor about pod like IPs
+```sh
+kubectl get pods -o wide
+```
