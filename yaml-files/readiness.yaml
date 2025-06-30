@@ -18,5 +18,5 @@ spec:
         - /tmp/healthy
       initialDelaySeconds: 0
       periodSeconds: 1
-      successThreshold: 1  # تصحيح: successThreshold بدلاً من sucessThreshold
+      successThreshold: 1  
       failureThreshold: 1
