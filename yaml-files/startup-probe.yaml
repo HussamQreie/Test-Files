@@ -1,6 +1,5 @@
-# جس نبض التطبيق داخل الحاوية عند بدء عمل الحاوية
 apiVersion: v1
-kind: Pod
+kind: Pod  
 metadata:
   name: startup
 spec:
@@ -15,3 +14,6 @@ spec:
       successThreshold: 1
       periodSeconds: 5
       initialDelaySeconds: 0
+
+      # جس نبض التطبيق داخل الحاوية عند بدء عمل الحاوية
+
