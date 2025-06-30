@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
   - name: liveness-container
-    image: eu.gcr.io/k8s-artifacts-prod/liveness:latest # updated from google container registry (gcr)
+    image: docker.io/cnych/liveness
     args:
     - /server
     livenessProbe:
