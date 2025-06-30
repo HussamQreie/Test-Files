@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: readiness-a
+
+spec:
+  containers:
+  - name: readiness-a
+    image: brainupgrade/tshoot
+    command:
+    - /bin/sh
+    args:
+    - -c
+    - while true: do touch /tmp/healthy; sleep 15; rm -rf /tmp/healthy; sleep 5; touch /tmp/healthy;done
+    readinessProbe:
+      exec:
+        command:
+        - cat
+        - /tmp/healthy
+      initialDelaySeconds: 0
+      periodSeconds: 1
+      sucessThreshold: 1
+      failureThreshold: 1
