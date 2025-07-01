@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  label:
+    app: app
+  name: deployment-pod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app
+  template:
+    metadata:
+      label:
+        app: app
+    spec:
+      containers:
+      - image: docker.io/brainupgrade/hello:1.0
+        name: hello-container
