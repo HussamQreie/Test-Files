@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  label:
+  labels:
     app: app
   name: deployment-pod
 spec:
@@ -11,7 +11,7 @@ spec:
       app: app
   template:
     metadata:
-      label:
+      labels:
         app: app
     spec:
       containers:
